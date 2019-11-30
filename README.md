@@ -9,16 +9,13 @@ All credit goes to the authors of the following wonderful blog posts.
 * <https://ericchiang.github.io/post/containers-from-scratch/>
 * <https://jvns.ca/blog/2019/11/18/how-containers-work--overlayfs/>
 * <https://medium.com/@saschagrunert/demystifying-containers-part-i-kernel-space-2c53d6979504>
+* <https://blogs.igalia.com/dpino/2016/04/10/network-namespaces/>
 
 ## Setup
 
 The project contains a `Vagrantfile` that runs a Fedora 31 VM.
 
-Make sure the Vagrant Guest Additions plugin is installed: `vagrant plugin install vagrant-vbguest`.
-
-Start the VM: `vagrant up`.
-
-Sometimes, the guest additions update fails during the first run of `vagrant up`. In such case, install these manually using command: `vagrant vbguest --do install` and restart the VM (`vagrant halt` followed by `vagrant up`).
+Setup the VM using: `./setup.sh`.
 
 The project root directory on the host is mapped to `/vagrant` in the guest. All the action below takes place in the `/vagrant` directory in the guest. Change into `/vagrant` directory in the VM before carrying out steps below:
 
